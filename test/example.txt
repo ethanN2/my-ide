@@ -1,0 +1,1 @@
+For the latest code, always refer to the main branch. Neovim nightly build is required. The code in the branch for the respective article is not maintained and is not guaranteed to work for Neovim nightly.
