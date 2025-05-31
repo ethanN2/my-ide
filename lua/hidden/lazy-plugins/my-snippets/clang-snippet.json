@@ -1,0 +1,32 @@
+{
+    "define header": {
+        "scope": "cpp,h,hpp",
+        "prefix": [
+            "header"
+        ],
+        "body": [
+            "/** @file $TM_FILENAME",
+            " * ",
+            " * @brief A description of the ${TM_FILENAME/(.*)\\.[^.]+$}’s purpose.",
+            " * ",
+            " * @par",
+            " */",
+            "",
+            "#ifdef ${TM_FILENAME}",
+            "#define ${TM_FILENAME}",
+            "",
+            "",
+            "${1:your_module}",
+            "",
+            "#endif /* ${TM_FILENAME} */",
+            "",
+            "/*** end of file ***/"
+        ],
+        "description": "init header file",
+        "luasnip": {
+            "priority": 2000,
+            "autotrigger": true,
+            "wordTrig": false
+        }
+    }
+}

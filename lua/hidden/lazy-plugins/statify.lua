@@ -61,10 +61,10 @@ return {
             { type = 'dir',               header = { '   MRU ' .. vim.fn.getcwd() } },
             { type = 'sessions',          header = { '   Sessions' } },
             { type = 'bookmarks',         header = { '   Bookmarks' } },
-            { type = gitModified(),       header = { '   git modified' } },
-            { type = gitUntracked(),      header = { '   git untracked' } },
-            { type = 'commands',          header = { '   Commands' } },
-            { type = nerdtreeBookmarks(), header = { '   NERDTree Bookmarks' } }
+            { type = 'commands',  header = { '   Git Modified' },           items = gitModified() },
+            { type = 'commands',  header = { '   Git Untracked' },          items = gitUntracked() },
+            { type = 'commands',  header = { '   NERDTree Bookmarks' },     items = nerdtreeBookmarks() },
+            { type = 'commands',  header = { '   Commands' } },
         }
 
         --local header_cmd =  'fortune | cowsay -W 80 -f $(cowsay -l | sed "/[A-Z].*$/d" | shuf -n 1)'
