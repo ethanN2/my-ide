@@ -1,1 +1,1 @@
-require("hidden")
+require("config.lazy")

@@ -1,0 +1,71 @@
+return {
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	event = "InsertEnter",
+	-- 	dependencies = {
+	-- 		"davidsierradz/cmp-conventionalcommits",
+	-- 		"hrsh7th/cmp-nvim-lsp",
+	-- 		"hrsh7th/cmp-buffer",
+	-- 		"hrsh7th/cmp-path",
+	-- 	},
+	-- 	config = function()
+	-- 		local cmp = require("cmp")
+	-- 		local luasnip = require("luasnip")
+	--
+	-- 		cmp.setup({
+	-- 			snippet = {
+	-- 				expand = function(args)
+	-- 					luasnip.lsp_expand(args.body)
+	-- 				end,
+	-- 			},
+	-- 			window = {
+	-- 				completion = cmp.config.window.bordered(),
+	-- 				documentation = cmp.config.window.bordered(),
+	-- 			},
+	-- 			mapping = {
+	-- 				["<C-p>"] = cmp.mapping.select_prev_item(),
+	-- 				["<C-n>"] = cmp.mapping.select_next_item(),
+	-- 				["<C-d>"] = cmp.mapping.scroll_docs(-4),
+	-- 				["<C-f>"] = cmp.mapping.scroll_docs(4),
+	-- 				["<C-Space>"] = cmp.mapping.complete(),
+	-- 				["<C-e>"] = cmp.mapping.close(),
+	-- 				["<CR>"] = cmp.mapping.confirm({
+	-- 					behavior = cmp.ConfirmBehavior.Replace,
+	-- 					select = true,
+	-- 				}),
+	-- 				["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "s" }),
+	-- 				["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "s" }),
+	-- 			},
+	-- 			formatting = {
+	-- 				fields = { "menu", "abbr", "kind" },
+	-- 				format = function(entry, item)
+	-- 					local menu_icon = {
+	-- 						nvim_lsp = "λ",
+	-- 						luasnip = "⋗",
+	-- 						buffer = "Ω",
+	-- 						path = "🖫",
+	-- 						nvim_lua = "Π",
+	-- 					}
+	-- 					item.menu = menu_icon[entry.source.name]
+	-- 					return item
+	-- 				end,
+	-- 			},
+	-- 			sources = cmp.config.sources({
+	-- 				{ name = "nvim_lsp" },
+	-- 				{ name = "luasnip" },
+	-- 				{ name = "vsnip" },
+	-- 				{ name = "path" },
+	-- 				{ name = "conventionalcommits" },
+	-- 			}, {
+	-- 				{ name = "buffer" },
+	-- 			}),
+	-- 		})
+	--
+	-- 		vim.cmd([[
+	--       augroup NvimCmp
+	--       au!
+	--       au FileType TelescopePrompt lua require('cmp').setup.buffer { enabled = false }
+	--       augroup END
+	--     ]])
+	-- 	end,
+	-- 	main = "lazyvim.util.cmp",
+}
